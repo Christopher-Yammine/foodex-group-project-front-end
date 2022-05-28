@@ -14,3 +14,13 @@
     margin: 7px;
     font-size: 30pt;
 }
+
+select {
+    margin-top: 15px;
+        padding: 20px 30px;
+        border: 1px solid rgb(173, 173, 173);
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 90%;
+        font-size: 12pt;
+}
