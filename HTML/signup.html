@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/styles/index.css">
     <link rel="stylesheet" href="../CSS/styles/signup.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </head>
 <body>
@@ -16,27 +17,25 @@
         <div class="fx-div">
             <div class="cardboard">
                
-                    <div> <h1 class="cardboard-header"><a href="C:/xampp/htdocs/foodex-group-project-front-end/index.html"><span class="arrow material-icons">
+                    <div> <h1 class="cardboard-header"><a href="http://localhost/foodex-group-project-front-end/index.html"><span class="arrow material-icons">
                         arrow_back
                         </span></a>Enter your information</h1>
                    
                 </div>
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Last name">
-                    <input type="text" placeholder="Email address or phone number">
-                    <input type="password" placeholder="Password">
+                    <input type="text" id="fname" placeholder="First name">
+                    <input type="text" id="lname" placeholder="Last name">
+                    <input type="text" id="email" placeholder="Email address or phone number">
+                    <input type="password" id="password" placeholder="Password">
                     <select name="gender-types" id="gender-types">
                         <option value="0">Male</option>
                         <option value="1">Female</option>
                         <option value="2">Other</option>
 
                     </select>
-                    <input type="submit" value="Sign up">
-                        
+                    <input type="submit" value="Sign up" id="signup">                        
             </div>
         </div>
-
     </div>
-    
+    <script src="../Scripts/signup.js"></script>
 </body>
 </html>

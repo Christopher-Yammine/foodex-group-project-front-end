@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodex</title>
     <link rel="stylesheet" href="./CSS/styles/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -16,17 +17,18 @@
             </div>
             <div class="fx-div">
                 <div class="cardboard">
-                            <input type="text" placeholder="Email address or phone number"><br>
-                            <input type="password" placeholder="Password">
-                            <input type="submit" value="Log In">
+                            <input type="text" id="email" placeholder="Email address"><br>
+                            <input type="password" id="password" placeholder="Password">
+                            <input type="submit" id="signin" value="Log In">
                             <a href="#">Forgotten password?</a>
                 </div>
                 <div>
                     <p class="signup">
-                       Don't have an account? <b><a href="C:/xampp/htdocs/foodex-group-project-front-end/html/signup.html">Sign up</a></b> 
+                       Don't have an account? <b><a href="http://localhost/foodex-group-project-front-end/html/signup.html">Sign up</a></b> 
                     </p>
                 </div>
             </div>
         </div>
+        <script src="./Scripts/signin.js"></script>
 </body>
 </html>
