@@ -17,10 +17,13 @@ function checkcred(){
         if (response.data['response']=="logged in"){
             console.log(response);
             console.log(response.data['user_id']);
+            console.log(response.data['id_usertype']);
+            sessionStorage.setItem("userid", response.data['user_id']);
+            sessionStorage.setItem("name", response.data['name']);
+            window.location.href='http://localhost/foodex-group-project-front-end/html/landingpage.html'
         }
         else {
             window.alert(response.data['response']);
         }
     })
-    console.log(email,password);
 }
