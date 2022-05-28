@@ -48,7 +48,7 @@ body {
 
 
 
-input[type=text]{
+input{
         margin-top: 15px;
         padding: 20px 30px;
         border: 1px solid rgb(173, 173, 173);
@@ -57,14 +57,7 @@ input[type=text]{
         width: 90%;
         font-size: 12pt;
       }
-input[type=password]{
-        padding: 20px 30px;
-        margin-bottom:10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        width: 90%; 
-}
+
 input[type=text]:focus,input[type=password]:focus {
     outline: 1px ridge #f13861
   }
@@ -76,9 +69,9 @@ input[type=submit] {
     background-color: #ff8686;
     border: none;
     color: white;
-    padding: 14px 30px;
+    padding: 14px 30px 10px 10px;
     text-decoration: none;
-    margin: 2px 2px;
+    margin: 15px 15px;
     cursor: pointer;
     width: 90%;
     font-size: 16pt;

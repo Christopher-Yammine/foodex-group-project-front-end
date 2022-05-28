@@ -1,0 +1,16 @@
+.signup-container{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.cardboard-header {
+    color: white;
+    padding: 15px;
+}
+.arrow {
+    border:solid;
+    border-radius: 50%;
+    margin: 7px;
+    font-size: 30pt;
+}
