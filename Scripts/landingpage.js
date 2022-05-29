@@ -37,7 +37,6 @@ let restauBody=document.getElementById('restau-body');
         url:'http://localhost/foodex-group-project-back-end/landingpage.php',
         data:data
     }).then (function(response){
-        console.log(Math.ceil(response.data.length/3));
         let n=1;
         var row='';
         for (let i=0;i<Math.ceil(response.data.length/3);i++){
@@ -63,11 +62,12 @@ let restauBody=document.getElementById('restau-body');
             row='';
         }
         let div0=document.getElementsByClassName('restau-div');
-        console.log(div0);
+        
         for (let i=0;i<div0.length;i++){
-        console.log(div0);
+
         div0[i].addEventListener('click',function(event){
         window.location.href='http://localhost/foodex-group-project-front-end/html/reviews.html?id='+event.currentTarget.id;
+        
         
     })}
     })
