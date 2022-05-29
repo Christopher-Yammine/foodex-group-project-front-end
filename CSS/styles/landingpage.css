@@ -55,3 +55,45 @@ img {
     justify-content: center;
     padding:20px;
 }
+.restau-row>div{
+    background-color: #f13861;
+    height: 400px;
+    width:350px;
+    margin:20px;
+    border-radius: 40px;
+    transition:all 1s ease;
+}
+
+.restau-row img { 
+    height:150px;
+    width:350px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.inner-title {
+    display: flex;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right:20px;
+    font-family: sans-serif;
+}
+
+.description {
+    padding-left:20px;
+    padding-right:20px;
+    font-family: sans-serif;
+}
+
+.type {
+    float: right;
+    margin: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.restau-row>div:hover {
+    transform: scaley(1.1) scaleX(1.1);
+    cursor:pointer;
+    box-shadow: 2px 2px 6px 6px #fcff44;;
+    transition: 0.4s;
+}
