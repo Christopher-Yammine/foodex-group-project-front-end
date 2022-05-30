@@ -60,7 +60,7 @@ window.onload=function(){
 
         let btn=document.getElementById('btn');
         btn.addEventListener('click',function(event){
-            document.location.href='http://localhost/foodex-group-project-front-end/html/addreview.html'
+            document.location.href='http://localhost/foodex-group-project-front-end/html/addreview.html?id='+id;
         })
 
 }

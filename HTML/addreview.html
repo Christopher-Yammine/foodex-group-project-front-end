@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a review</title>
+    <link rel="stylesheet" href="../CSS/styles/addreview.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="page-header">
+        <div>
+            <span class="arrow material-icons" id="back">
+                arrow_back
+            </span>
+        </div>
+        <div class="logo">
+            <img src="../CSS/assets/headerlogo.png">
+        </div>
+    </div>
+    <div class="text-rev">
+        <textarea columns="50" rows="5" placeholder="What's on your mind? 😊"></textarea>
+    </div>
+    <div class="submit-section">
+    <div class="rating">
+  
+        <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+        <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+        <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+        <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+        <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+
+    </div>
+    <div class="button-submit">
+        <button id="btn">Submit</button>
+    </div>    
+    </div>
+    
+    <script src="../Scripts/addreview.js"></script>
+    
+</body>
+</html>

@@ -55,6 +55,12 @@ img {
     margin:50px;
     border-radius: 20px;
     box-shadow: 5px 5px rgb(44, 44, 44);
+    -webkit-animation: bummer 2s;
+    animation: bummer 2s;
+    -webkit-transform: scale(0.9,0.9); 
+    transform: scale(0.9,0.9);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     
 }
 
@@ -70,6 +76,23 @@ img {
     font-family: sans-serif;
     margin-left: 20px;
     padding-bottom:20px;
+    
+    
+}
+
+
+@-webkit-keyframes bummer {
+    100% {
+       
+        -webkit-transform: scale(1,1); 
+    }
+}
+
+@keyframes bummer {
+    100% {
+        
+        transform: scale(1,1); 
+    }
 }
 
 .arrow {
@@ -92,6 +115,7 @@ button {
     z-index: 1;
     margin-top:20px;
     background-color: black;
+    cursor: pointer;
 
 }
 
