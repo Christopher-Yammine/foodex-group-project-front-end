@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../CSS/styles/adminpanel.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+        <div class="main-container">
+            <div class="fx-div left-title">
+                <div class="cardboard">
+                        
+                    <div><h1 class="cardboard-header"><a href="http://localhost/foodex-group-project-front-end/html/landingpage.html"><span class="arrow material-icons">
+                        arrow_back
+                        </span></a>Change the fields</h1></div>
+                        <input type="text" id="restaurant_name" placeholder="Restaurant name">
+                        <textarea id="restaurant_description" placeholder="Description"></textarea>
+                        <input type="text" id="restaurant_number" placeholder="Restaurant number">
+                                <button id="btn" class="btn">Add</button>
+                                
+                    </div>
+                </div>
+                <div class="fx-div">
+                    <label for="fileId">Browse...</label>
+                    
+                    <input type="file" name="photo" id="fileId"
+                    onchange="imageUploaded()">
+                        <div class="upload" id="upload">
+                       <div id="display">
+                            <img src="./CSS/assets/nobg.png" id="uploaded">
+                        </div></div>
+             
+                        <div class="img-text">
+                            Upload the restaurant's picture
+                        </div>
+                    
+                    
+                </div>
+            </div>
+            <script src="../Scripts/adminpanel.js"></script>
+    </body>
+    
+</body>
+</html>
