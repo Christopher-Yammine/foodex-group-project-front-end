@@ -13,7 +13,7 @@ window.onload=function(){
         restaurantName.innerHTML='';
         restaurantName.innerHTML+=`<div>
         <h1>${response.data[0].restaurant_name}</h1>
-        <h3>rating of ${response.data[0].avg} from ${response.data[0].count} users</h3>
+        <h3>rating of ${response.data[0].avg}⭐ from ${response.data[0].count} users</h3>
     </div>
     <div><h2>${response.data[0].restaurant_number}</h2></div>  `
     })
@@ -44,31 +44,23 @@ window.onload=function(){
                 </div>
                 </div>
             <div class="review">
-                <div>
-                    ${response.data[i].review_text}
+                <div><em>
+                    ${response.data[i].review_text}</em>
                 </div>
                 </div>
         </div>` }
         userReviews.innerHTML+=divs;
         
-           /*divs+=`<div class="review-container">
-            <div class="review-title">
-                <div>
-                   <h2>${response.data[0].name} said at ${response.data[0].time}</h2> 
-                </div>
-                <div>
-                   <h2>${response.data[0].rating}⭐</h2> 
-                </div>   
-            </div>
-            <div class="review">
-                <div>
-                    ${response.data[0].review_text}
-                </div>
-            </div>
-        </div>`;
-        
-        */console.log('the divs are',divs);
-        }
-    )
+        })
+
+        let back=document.getElementById('back');
+        back.addEventListener('click',function(event){
+            document.location.href='http://localhost/foodex-group-project-front-end/html/landingpage.html'
+        })
+
+        let btn=document.getElementById('btn');
+        btn.addEventListener('click',function(event){
+            document.location.href='http://localhost/foodex-group-project-front-end/html/addreview.html'
+        })
 
 }
