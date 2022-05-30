@@ -1,4 +1,10 @@
 window.onload = function(){
+var admin=document.getElementById('admin');
+if(sessionStorage.getItem('userid')==1){
+    admin.style.display="block";
+    admin.style.margin="22px 0 0 0";
+    
+}
 let fname = sessionStorage.getItem("name");
 
 let greeting =document.getElementById('greet');

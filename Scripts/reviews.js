@@ -1,3 +1,9 @@
+if (sessionStorage.getItem("userid")==null){
+    
+    window.location.href="http://localhost/foodex-group-project-front-end/index.html";
+    window.alert("Please login");
+} else {
+
 window.onload=function(){
     let id=window.location.href.split('id=')[1];
 
@@ -13,7 +19,7 @@ window.onload=function(){
         restaurantName.innerHTML='';
         restaurantName.innerHTML+=`<div>
         <h1>${response.data[0].restaurant_name}</h1>
-        <h3>rating of ${response.data[0].avg}⭐ from ${response.data[0].count} users</h3>
+        <h3>rating of ${response.data[0].avg}⭐ from ${response.data[0].count} user(s)</h3>
     </div>
     <div><h2>${response.data[0].restaurant_number}</h2></div>  `
     })
@@ -30,7 +36,7 @@ window.onload=function(){
        
         userReviews.innerHTML='';
         var divs='';
-        console.log(response);
+        
         for (let i=0;i<response.data.length;i++){
 
        
@@ -63,4 +69,5 @@ window.onload=function(){
             document.location.href='http://localhost/foodex-group-project-front-end/html/addreview.html?id='+id;
         })
 
+}
 }

@@ -43,6 +43,7 @@ textarea {
     transition: all 0.3s;
     font-family: sans-serif;
     font-size: 12pt;
+    padding: 10px;
 }
 
 textarea:focus{
@@ -126,4 +127,15 @@ textarea::placeholder{
     button:hover{
         transform: scale(1.1);
         transition: 0.3s;
+    }
+    .status {
+    
+     display: none;
+     margin: 20px;   
+     padding: 20px;
+     color:#f4d97e ;
+     background-color: black;
+     font-family: sans-serif;
+     transition:all 1s ease;
+     border-radius: 10px;
     }

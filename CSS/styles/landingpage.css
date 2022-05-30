@@ -97,3 +97,25 @@ img {
     box-shadow: 2px 2px 6px 6px #fcff44;;
     transition: 0.4s;
 }
+a:visited{
+    color: #000000;
+}
+a:link {
+    
+    color: #000000;
+    text-decoration: none;
+    margin: 15px 0;
+    font-family: sans-serif;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.features {
+    display: flex;
+}
+
+#admin {
+    display: none;
+    
+}
