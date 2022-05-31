@@ -139,3 +139,10 @@ textarea::placeholder{
      transition:all 1s ease;
      border-radius: 10px;
     }
+
+    @media (max-width:800px){
+
+        .submit-section{
+            flex-direction: column;
+        }
+    }

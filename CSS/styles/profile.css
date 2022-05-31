@@ -173,6 +173,15 @@ body {
           text-align: center;
           height: 400px;
       }
+
+      .msg {
+          color:#08e900;
+          border-radius: 5px;
+          font-family: sans-serif;
+          margin: 15px;
+          
+          
+      }
   
   
   }

@@ -119,3 +119,23 @@ a:hover{
     display: none;
     
 }
+@media (max-width:800px) {
+    
+    .logo {
+        display: none;
+    }
+    .greet {
+        display: none;
+    }
+    .page-header {
+        justify-content: center;
+    }
+    .restau-row{
+        flex-direction: column;
+        
+    }
+    .restau-row>div{
+        justify-content: center;
+        align-self: center;
+    }
+}

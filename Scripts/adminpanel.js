@@ -27,6 +27,7 @@ window.onload=function(){
 	let btn=document.getElementById('btn');
 	let locbtn=document.getElementById('locbtn');
 	let typebtn=document.getElementById('typebtn');
+	let btnid=0;
 	
 	
 	function cardboardDiv(){
@@ -69,12 +70,60 @@ window.onload=function(){
 	
 
 	}
+	
+	function populateTable(){
+		let table=document.getElementById('table-body');
+		table.innerHTML='';
+		row='';
+		
+		let data = new FormData();
+		axios({
+			method:'get',
+			url : 'http://localhost/foodex-group-project-back-end/getunaccepted.php',
+			data : data
+		}).then (function(response){
+			console.log(response);
+			for (let i=0;i<response.data.length;i++){
+				row+=`<tr>
+				<td>${response.data[i].name}</td>
+				<td>${response.data[i].restaurant_name}</td>
+				<td>${response.data[i].review_text}</td>
+				<td><button id=${response.data[i].id_review} class="btn-approve">Approve</td>
+				
+			</tr>`
+			}
+			table.innerHTML+=row;
+			let approvals=document.getElementsByClassName('btn-approve');
+			for (let k=0;k<approvals.length;k++){
+			approvals[k].addEventListener('click',function(event){
+			btnid=event.currentTarget.id;
+			updateReviews();
+			})
+			}
+		})
+		
+	}
 	cardboardDiv();
-
-
+	populateTable();
+	
 	btn.addEventListener('click',addRestau);
 	locbtn.addEventListener('click', addloc);
 	typebtn.addEventListener('click', addtype);
+	
+	function updateReviews(){
+		console.log(btnid);
+		let data =new FormData();
+
+		data.append("id_review",btnid);
+		axios({
+			method:'post',
+			url:'http://localhost/foodex-group-project-back-end/acceptrev.php',
+			data:data
+		}).then(function(response){
+			console.log(response);
+			populateTable();
+		})
+	}
 
 	function addloc(){
 		let location=document.getElementById('newloc').value;
@@ -108,7 +157,6 @@ window.onload=function(){
 	}
 
 	
-
 
 	function addRestau(){
 		let dispPic=base64String;

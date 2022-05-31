@@ -59,6 +59,7 @@ function imageUploaded() {
                        <input type="text" id="name" placeholder="${response.data[0].name}">
                        <input type="text" id="lname" placeholder="${response.data[0].last_name}">
                        <button id="btn" class="btn">Save</button>
+                       <div class="msg" id="msg"></div>
                        
            </div>
            
@@ -90,7 +91,15 @@ function imageUploaded() {
             url:'http://localhost/foodex-group-project-back-end/editprofile.php',
             data:data
         }).then(function(response){
-            console.log(response);
+            let div=document.getElementById("msg");
+            div.innerText="Updated ✔️"
+            setTimeout(function(){
+                div.innerText=""
+            },1000);
+            setTimeout(function(){
+                window.location.reload();
+            },1100)
+            
         })
           
         }

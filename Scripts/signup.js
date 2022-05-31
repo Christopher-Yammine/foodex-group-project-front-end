@@ -1,17 +1,34 @@
+let base64String = "";
+function imageUploaded() {
+	var file = document.querySelector(
+		'input[type=file]')['files'][0];
+
+	var reader = new FileReader();
+	console.log("next");
+	
+	reader.onload = function () {
+		base64String = reader.result;
+		var disp=document.getElementById('display');
+        disp.innerHTML='';
+		disp.innerHTML=`<img src="`+base64String+`">`
+	}
+	reader.readAsDataURL(file);
+
+}    
 let signup=document.getElementById('signup');
 
 signup.addEventListener('click', addUser);
 
 function addUser(){
 
-
+    let disp=base64String;
     let fname=document.getElementById('fname').value;
     let lastname=document.getElementById('lname').value;
     let email=document.getElementById('email').value;
     let password=document.getElementById('password').value;
     let gender=document.getElementById('gender-types').value;
     
-    if (fname=='' || lastname=='' || email=='' || password=='' || gender==''){
+    if (fname=='' || lastname=='' || email=='' || password=='' || gender=='' || disp==''){
         window.alert('These fields are required');
     } else {
       
@@ -37,6 +54,7 @@ function addUser(){
         data.append('name',fname);
         data.append('last_name',lastname);
         data.append('gender',gender);
+        data.append('profile_picture',disp);
     
         axios({
             method:'post',
@@ -44,8 +62,14 @@ function addUser(){
             data:data
         }).then(function(response){
            
-                window.location.href='http://localhost/foodex-group-project-front-end/index.html';
-                console.log(response.data['success']);
+            let div=document.getElementById("msg");
+            div.innerText="You are in! ✔️"
+            setTimeout(function(){
+                div.innerText=""
+            },1000);
+            setTimeout(function(){
+                window.location.reload();
+            },1100)
            
                
             })

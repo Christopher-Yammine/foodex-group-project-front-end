@@ -4,7 +4,17 @@ if (sessionStorage.getItem("userid")==null){
     window.alert("Please login");
 } else {
 window.onload = function(){
-var admin=document.getElementById('admin');
+let logout=document.getElementById('logout');
+console.log(logout);
+logout.addEventListener('click',function(event){
+    sessionStorage.removeItem("userid");
+    setTimeout(function(){
+        window.location.href="http://localhost/foodex-group-project-front-end/index.html";
+        console.log(sessionStorage.getItem("userid"));
+    },2000);
+})
+
+let admin=document.getElementById('admin');
 if(sessionStorage.getItem('userid')==1){
     admin.style.display="block";
     admin.style.margin="23px 0 0 0";

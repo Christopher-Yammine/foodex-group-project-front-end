@@ -1,6 +1,6 @@
 .signup-container{
     display:flex;
-    justify-content: center; 
+    justify-content: space-around; 
     align-content: center;
 }
 
@@ -23,4 +23,51 @@ select {
         box-sizing: border-box;
         width: 90%;
         font-size: 12pt;
+}
+.upload {
+    border:solid;
+    border-radius: 10px;
+    width: fit-content;
+    height:fit-content;
+    
+}
+img {
+  width: 200px;
+  margin:10px;
+  
+}
+.img-text {
+    font-family: sans-serif;
+    font-size: 12pt;
+    margin:10px;
+}
+label {
+  border:solid;
+  margin: 10px;
+  padding:10px;
+  cursor: pointer;
+  color : #f4d97e;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 20pt;
+}
+
+#fileId {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.msg {
+    color:#08e900;
+    border-radius: 5px;
+    font-family: sans-serif;
+    margin: 15px;
+    
+    
+}
+
+@media(max-width:800px){
+    .signup-container{
+        flex-direction: column-reverse;
+    }
 }

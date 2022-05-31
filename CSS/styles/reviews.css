@@ -28,7 +28,7 @@ img {
     color:#f4d97e;
     font-family: sans-serif;
     margin:50px;
-    gap:800px;
+    gap:40%;
     border-radius: 20px;
     box-shadow: 5px 5px rgb(44, 44, 44);
 }
@@ -125,3 +125,8 @@ button:hover{
 }
     
   
+/*@media (max-width:1150px){
+    .restaurant-name {
+        gap:0;
+    }
+}*/
