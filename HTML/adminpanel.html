@@ -11,27 +11,47 @@
 </head>
 <body>
         <div class="main-container">
-            <div class="fx-div left-title">
+            <div class="left-title">
                 <div class="cardboard">
                         
                     <div><h1 class="cardboard-header"><a href="http://localhost/foodex-group-project-front-end/html/landingpage.html"><span class="arrow material-icons">
                         arrow_back
-                        </span></a>Change the fields</h1></div>
+                        </span></a>Add new restaurant</h1></div>
                         <input type="text" id="restaurant_name" placeholder="Restaurant name">
-                        <textarea id="restaurant_description" placeholder="Description"></textarea>
+                        <textarea id="restaurant_description" placeholder="Brief description"></textarea>
                         <input type="text" id="restaurant_number" placeholder="Restaurant number">
+                        <select name="locations" id="locations">
+                         
+                        </select>
+                        <select name="types" id="types">
+                        
+                        </select>
                                 <button id="btn" class="btn">Add</button>
                                 
                     </div>
                 </div>
                 <div class="fx-div">
+                    <div class="addvalues">
+                        <p class="new-values">Add new location</p>
+                        <div class="values">
+                            
+                            <input type="text" class="new-input" id="newloc" placeholder="city name, street name">
+                            <button class="btn-new" id="locbtn">Add</button>
+                        </div>
+                        <p class="new-values">Add new type</p>
+                        <div class="values">
+                            
+                            <input type="text" id="newtype" class="new-input" placeholder="Food type">
+                            <button class="btn-new" id="typebtn">Add</button>
+                        </div>
+                    </div>
                     <label for="fileId">Browse...</label>
                     
                     <input type="file" name="photo" id="fileId"
                     onchange="imageUploaded()">
                         <div class="upload" id="upload">
                        <div id="display">
-                            <img src="./CSS/assets/nobg.png" id="uploaded">
+                            <img src="../CSS/assets/foodbg.jpg" id="uploaded">
                         </div></div>
              
                         <div class="img-text">

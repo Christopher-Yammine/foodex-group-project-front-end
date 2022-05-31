@@ -22,6 +22,7 @@ body {
       align-items:center;
       justify-content: center;
       height: 650px;
+      
   }
   
   
@@ -37,10 +38,13 @@ body {
       box-shadow: 1px 1px 3px 3px #ff819c;
     }
   .left-title {
+        padding-top:50px;
       padding-left: 0;
       align-items: center;
       justify-content: center;
       height: fit-content;
+      
+      
   }
   .left-title p {
       font-family:sans-serif;
@@ -158,9 +162,50 @@ select {
     width: 90%;
     font-size: 12pt;
 }
+.addvalues{
+    display: flex;
+    flex-direction: column;
+}
 
+.values {
+    display: flex;
+}
   
-  
+.btn-new {
+    background-color: #ff8686;
+      border: none;
+      color: white;
+      margin: 15px 0 0 5px;
+      padding: 20px 30px;
+      text-decoration: none;
+     
+      cursor: pointer;
+      width: fit-content;
+      font-size: 16pt;
+      font-weight: bold;
+      border-radius: 5%;
+}
+.new-values{
+    border:solid;
+    margin-top: 15px;
+    padding: 20px 30px;
+    font-family: sans-serif;
+    border-radius: 5px;
+   
+    
+  }
+  .new-input{
+    border:solid;
+    margin-top: 15px;
+    padding: 20px 30px;
+    font-family: sans-serif;
+    border-radius: 5px;
+   
+    
+  }
+  .new-input:hover{
+      box-shadow: 1px 1px 5px 5px yellow ;
+  }
   
   @media (max-width:800px){
       .main-container{
@@ -168,10 +213,12 @@ select {
       }
       .fx-div {
           width: 100%;
+          margin:150px 0 20px 0;
           padding-top: 50px ;
           padding-bottom: 20px;
           padding-left: 0;
           height: fit-content;
+          
       }
       .left-title > div 
       {
@@ -182,6 +229,7 @@ select {
       .left-title{
           text-align: center;
           height: 400px;
+          margin:20px 0 20px 0;
       }
   
   

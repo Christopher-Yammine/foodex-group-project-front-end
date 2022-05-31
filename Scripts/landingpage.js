@@ -1,8 +1,13 @@
+if (sessionStorage.getItem("userid")==null){
+    
+    window.location.href="http://localhost/foodex-group-project-front-end/index.html";
+    window.alert("Please login");
+} else {
 window.onload = function(){
 var admin=document.getElementById('admin');
 if(sessionStorage.getItem('userid')==1){
     admin.style.display="block";
-    admin.style.margin="22px 0 0 0";
+    admin.style.margin="23px 0 0 0";
     
 }
 let fname = sessionStorage.getItem("name");
@@ -48,7 +53,7 @@ let restauBody=document.getElementById('restau-body');
         for (let i=0;i<Math.ceil(response.data.length/3);i++){
             for (let j=n;j<response.data.length+1;++j){
                 row+=`<div class="restau-div" id=${response.data[j-1].id_restaurant}>
-                <img src="../CSS/assets/foodbg.jpg" alt="../CSS/assets/foodbg.jpg">
+                <img src="${response.data[j-1].restaurant_picture}">
                 <div class="inner-title">
                     <h4>${response.data[j-1].restaurant_name}</h4>
                     <h4>${response.data[j-1].city_name},${response.data[j-1].restaurant_number}</h4>
@@ -80,5 +85,5 @@ let restauBody=document.getElementById('restau-body');
     
     
 }
-
+}
 //${response.data[j-1].restaurant_picture}
