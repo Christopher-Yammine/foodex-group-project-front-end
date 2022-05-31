@@ -62,6 +62,7 @@ body {
           box-sizing: border-box;
           width: 90%;
           font-size: 12pt;
+          font-family: sans-serif;
         }
   
   input[type=text]:focus,input[type=password]:focus,textarea:focus {
@@ -115,7 +116,7 @@ body {
 }
   img {
     width: 200px;
-    margin:30px;
+    margin:10px;
     
   }
   .img-text {
@@ -125,7 +126,7 @@ body {
   }
   label {
     border:solid;
-    margin: 20px;
+    margin: 10px;
     padding:10px;
     cursor: pointer;
     color : #f4d97e;
@@ -165,6 +166,9 @@ select {
 .addvalues{
     display: flex;
     flex-direction: column;
+    border: solid;
+    padding: 10px 10px 20px 10px;
+    border-radius: 5px;
 }
 
 .values {
@@ -218,6 +222,7 @@ select {
           padding-bottom: 20px;
           padding-left: 0;
           height: fit-content;
+          flex-direction: column-reverse;
           
       }
       .left-title > div 
